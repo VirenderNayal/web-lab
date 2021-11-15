@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Raleway:wght@800&display=swap"
+        rel="stylesheet">
+    <title>Web-Lab | Virender Nayal</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            background-color: aqua;
+        }
+
+        h2,
+        h3 {
+            margin: 10px;
+        }
+
+        table,
+        th,
+        td {
+            padding: 6px;
+            border: 1px solid black;
+        }
+
+        .inForm input{
+            width: 25px;
+        }
+
+        input, textarea {
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid blueviolet;
+            border-radius: 6px;
+        }
+
+        button {
+            margin: 10px;
+            background-color: rgb(38, 134, 212);
+            color: white;
+            border: 2px solid rgb(22, 38, 185);
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: rgb(172 241 241);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .goHome {
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+            background-color: rgb(220, 238, 57);
+            width: 10px;
+            height: 18px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .list {
+            display: flex;
+        }
+
+        .list-item {
+            list-style: none;
+            margin: 20px 0px;
+        }
+
+        .list .logo {
+            font-family: 'Raleway', sans-serif;
+            margin-left: 20px;
+        }
+
+        .list-item a {
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .grid-container {
+            height: 300px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .calc-btn {
+            background-color: rgb(46, 236, 94);
+            height: 40px;
+            width: 60px;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            margin: 1px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="list">
+            <li class="list-item logo">Web-Lab</li>
+            <li class="list-item"><a href="#q1">Question #1</a></li>
+            <li class="list-item"><a href="#q2">Question #2</a></li>
+            <li class="list-item"><a href="#q3">Question #3</a></li>
+            <li class="list-item"><a href="#q4">Question #4</a></li>
+            <li class="list-item"><a href="#q5">Question #5</a></li>
+            <li class="list-item"><a href="#q6">Question #6</a></li>
+            <li class="list-item"><a href="#q7">Question #7</a></li>
+            <li class="list-item"><a href="#q8">Question #8</a></li>
+            <li class="list-item"
+                style="font-family: monospace; font-weight: bolder; font-size: large; margin-left: 100px;">Virender
+                Nayal</a></li>
+        </ul>
+    </nav>
+    <div class="goHome">
+        <p><a href="#">&uarr;</a></p>
+    </div>
+    <div class="container" id="q1">
+        <h2>Question 1</h2>
+        <h3>Table</h3>
+        <table>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+        </table>
+        <h3>Lists</h3>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+        <ol>
+            <li>Orderd Item 1</li>
+            <li>Orderd Item 2</li>
+            <li>Orderd Item 3</li>
+            <li>Orderd Item 4</li>
+            <li>Orderd Item 5</li>
+        </ol>
+        <h3>Image</h3>
+        <img src="https://picsum.photos/500/200" alt="a random image">
+        <h3>Form</h3>
+        <form action="/">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname">
+            <br>
+            <div class="inForm">
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+                <br>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> I have a boat</label>
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="container" id="q2">
+        <h2>Question 2</h2>
+        <iframe src="./index.html" width="1000px" height="500px"></iframe>
+    </div>
+    <div class="container" id="q3">
+        <h2>Question 3</h2>
+        <textarea name="userInput" id="user_input" cols="50" rows="10" placeholder="Enter text here"></textarea>
+        <br>
+        <button id="sub">Submit</button>
+        <script>
+            document.getElementById("sub").addEventListener("click", function () {
+                var str = document.getElementById("user_input").value;
+                alert(
+                    "Word count is " +
+                    str.split(" ").filter((x) => x !== "").length +
+                    "\nLine count is " +
+                    ((str.match(/\n/g) || "").length + 1) +
+                    "\nCharacter count is " +
+                    str.length
+                );
+            });
+        </script>
+    </div>
+    <div class="container" id="q4">
+        <h2>Question 4</h2>
+        <input type="text" placeholder="Type your equation" id="eqn-input" />
+        <div class="grid-container">
+            <div class="calc-btn" id="clr-btn">CLR</div>
+            <div class="calc-btn" id="bksp-btn">BKSP</div>
+            <div class="calc-btn" id="eql-btn">=</div>
+            <div class="calc-btn num">1</div>
+            <div class="calc-btn num">2</div>
+            <div class="calc-btn num">3</div>
+            <div class="calc-btn num">4</div>
+            <div class="calc-btn num">5</div>
+            <div class="calc-btn num">6</div>
+            <div class="calc-btn num">7</div>
+            <div class="calc-btn num">8</div>
+            <div class="calc-btn num">9</div>
+            <div class="calc-btn num">0</div>
+            <div class="calc-btn num">+</div>
+            <div class="calc-btn num">-</div>
+            <div class="calc-btn num">*</div>
+            <div class="calc-btn num">/</div>
+            <div class="calc-btn num">.</div>
+        </div>
+        <script>
+            window.onload = function (e) {
+                eqnInput = document.getElementById("eqn-input");
+
+                eqlBtn = document.getElementById("eql-btn");
+                clrBtn = document.getElementById("clr-btn");
+                bkspBtn = document.getElementById("bksp-btn");
+
+                numbers = document.getElementsByClassName("num");
+
+                for (let ele of numbers) {
+                    ele.addEventListener("click", () => {
+                        eqnInput.value += ele.innerHTML;
+                    });
+                }
+
+                eqlBtn.addEventListener("click", () => {
+                    eqnInput.value = eval(eqnInput.value);
+                });
+
+                clrBtn.addEventListener("click", () => {
+                    eqnInput.value = "";
+                });
+
+                bkspBtn.addEventListener("click", () => {
+                    let t = eqnInput.value.toString();
+                    console.log(t);
+                    eqnInput.value = [...t].slice(0, -1).join("");
+                });
+            };
+        </script>
+    </div>
+    <div class="container" id="q5">
+        <h2>Question 5</h2>
+        <table id="mytable">
+            <tr>
+                <th>Number</th>
+                <th>Square</th>
+                <th>Cube</th>
+            </tr>
+        </table>
+        <script>
+            myTable = document.getElementById("mytable");
+
+            for (var i = 0; i < 11; ++i) {
+                myTable.innerHTML =
+                    myTable.innerHTML +
+                    `<tr><td>${i}</td><td>${i * i}</td><td>${i * i * i}</td></tr>`;
+            }
+        </script>
+    </div>
+    <div class="container" id="q6">
+        <h2>Question 6</h2>
+        <b>
+            <p id="obj">Click Start</p>
+        </b>
+        <button type="button" name="button" onclick="start()">START!</button>
+        <script type="text/javascript">
+            var size = 5;
+            var color = "black";
+            var status = "rise";
+            function trigger() {
+                var x = document.getElementById("obj");
+                if (status == "rise") {
+                    size++;
+                    if (size == 50)
+                        status = "fall";
+                    x.innerHTML = "TEXT-GROWING";
+                    x.style.color = "red";
+                    x.style.fontSize = size + "pt";
+                }
+
+                if (status == "fall") {
+                    size--;
+                    if (size == 5)
+                        status = "rise";
+                    x.innerHTML = "TEXT-SHRINKING";
+                    x.style.color = "blue";
+                    x.style.fontSize = size + "pt";
+                }
+            }
+            function start() {
+                setInterval(trigger, 50);
+            }
+        </script>
+    </div>
+    <div class="container" id="q7">
+        <h2>Question 7</h2>
+        <table border="solid">
+            <tr>
+                <td>
+                    <h2>Part A</h2>
+                    <label for="">Enter a string </label>
+                    <input type="text" name="" value="" id="inp_1">
+                    <br>
+                    <button type="button" name="button" onclick="part1()">Submit</button>
+                    <p id="result_1"></p>
+                </td>
+                <td>
+                    <h2>Part B</h2>
+                    <label for="">Enter a number </label>
+                    <input type="text" name="" value="" id="inp_2">
+                    <br>
+                    <button type="button" name="button" onclick="part2()">Submit</button>
+                    <p id="result_2"></p>
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            function part1() {
+                var x = document.getElementById("inp_1").value;
+                var y = document.getElementById("result_1");
+                var pos = [];
+                pos[0] = x.search("a");
+                pos[1] = x.search("e");
+                pos[2] = x.search("i");
+                pos[3] = x.search("o");
+                pos[4] = x.search("u");
+
+                var result = Infinity;
+
+                for (var i = 0; i < 5; i++) {
+                    if ((pos[i] >= 0) && (pos[i] < result))
+                        result = pos[i];
+                }
+
+                if (result != Infinity)
+                    y.innerHTML = "Position of left-most vowel: " + (result + 1);
+
+                else {
+                    y.innerHTML = "Vowel not found";
+                }
+            }
+
+            function part2() {
+                var x = document.getElementById("inp_2").value;
+                var y = document.getElementById("result_2");
+                var z = x.split("");
+
+                var i = 0;
+                var j = x.length - 1;
+
+                while (i < j) {
+                    var temp = z[i];
+                    z[i] = z[j];
+                    z[j] = temp;
+                    i++;
+                    j--;
+                }
+                x = "";
+                for (var k = 0; k < z.length; k++) {
+                    x = x + z[k];
+                }
+                y.innerHTML = "Reversed = " + x;
+            }
+        </script>
+    </div>
+    <div class="container" id="q8">
+        <h2>Question 8</h2>
+        <form>
+            <input type="text" id="numbers" />
+            <br /><br />
+            <button class="btn" onclick="convertToWords(event)">
+                Convert To Words
+            </button>
+            <br /><br />
+            <input type="text" id="words" />
+        </form>
+        <script>
+            function convertToWords(event) {
+                event.preventDefault();
+                const inputNumbers = parseInt(document.getElementById("numbers").value);
+                const outputField = document.getElementById("words");
+                let answer = "";
+                if (isNaN(inputNumbers)) {
+                    answer = "Not a Number";
+                } else if (inputNumbers < 0 || inputNumbers > 999) {
+                    answer = "Out of range";
+                } else {
+                    let temp = inputNumbers;
+                    let wordsArray = [];
+                    while (temp > 0) {
+                        let n = temp % 10;
+                        let word = getWord(n);
+                        wordsArray.push(word);
+                        temp /= 10;
+                        temp = Math.floor(temp);
+                    }
+                    wordsArray.reverse();
+
+                    for (let i = 0; i < wordsArray.length; i++) {
+                        answer += wordsArray[i] + " ";
+                    }
+                }
+
+                outputField.value = answer;
+            }
+            function getWord(n) {
+                switch (n) {
+                    case 0:
+                        return "Zero";
+                    case 1:
+                        return "One";
+                    case 2:
+                        return "Two";
+                    case 3:
+                        return "Three";
+                    case 4:
+                        return "Four";
+                    case 5:
+                        return "Five";
+                    case 6:
+                        return "Six";
+                    case 7:
+                        return "Seven";
+                    case 8:
+                        return "Eight";
+                    case 9:
+                        return "Nine";
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
